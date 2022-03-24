@@ -105,7 +105,6 @@ class _SplashState extends State<Splash> {
       OtaUpdate()
           .execute(
         '${url}',
-        destinationFilename: 'flutter_hello_world.apk',
       )
           .listen(
         (OtaEvent event) {
