@@ -43,8 +43,8 @@ class _SplashState extends State<Splash> {
       var buildNumber = int.parse(packageInfo.buildNumber);
       var version = packageInfo.version;
 
-      int lastBuildNumber = json['latestVersionCode'];
-      String lastVersion = json['latestVersion'];
+      int lastBuildNumber = int.parse(json['latestVersionCode']);
+      var lastVersion = json['latestVersion'];
       String linkDownload = json['url'];
 
       if (buildNumber < lastBuildNumber && buildNumber != lastVersion) {

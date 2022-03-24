@@ -7,11 +7,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
-          children: [
-            Text("Olá"),
-            Text("Estou na home, estou na última versão"),
-          ],
+        child: Center(
+          child: Text("Olá, Estou na home, estou na última versão"),
         ),
       ),
     );
