@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text("Olá, Estou na home, estou na última versão"),
+          child: Text("Olá, alterei algumas coisas, perceberam ???"),
         ),
       ),
     );
