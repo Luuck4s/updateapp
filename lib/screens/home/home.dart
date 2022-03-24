@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text("Olá, alterei algumas coisas, perceberam ???"),
+          child: Text("ATUALIZADO VERSÃO 4.0.0"),
         ),
       ),
     );
