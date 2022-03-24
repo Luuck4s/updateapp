@@ -64,6 +64,7 @@ class _SplashState extends State<Splash> {
               TextButton(
                 child: const Text('Ok'),
                 onPressed: () {
+                  Navigator.of(context).pop();
                   updateApp(linkDownload);
                 },
               ),
@@ -104,6 +105,7 @@ class _SplashState extends State<Splash> {
       OtaUpdate()
           .execute(
         '${url}',
+        destinationFilename: 'flutter_hello_world.apk',
       )
           .listen(
         (OtaEvent event) {
@@ -121,15 +123,9 @@ class _SplashState extends State<Splash> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         child: Center(
-          child: Column(
-            children: [
-              Text(
-                "Buscando Atualizações",
-                textScaleFactor: 2,
-              ),
-              Text(
-                  'OTA status: ${currentEvent.status.toString()} : ${currentEvent.value.toString()} \n'),
-            ],
+          child: Text(
+            "Buscando Atualizações \n OTA status: ${currentEvent.status.toString()} : ${currentEvent.value.toString()} \n",
+            textScaleFactor: 2,
           ),
         ),
       ),
